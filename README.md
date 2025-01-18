@@ -1,1 +1,1 @@
-# Mad_Libs_Generator
+# Funny Story Generator
