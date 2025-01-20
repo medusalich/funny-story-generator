@@ -14,18 +14,13 @@ def alter_erfragen() -> int:
 
 def alter_einstufen(alter: int) -> str:
     """Erzeugt eine Alterseinstufung abhängig vom Alter."""
-    junger_mensch = 0 <= alter < 27
-    erwachsener_mensch = 27 <= alter <= 59 
-    alter_mensch = 60 <= alter <= 122
-    zu_alter_mensch = alter > 122
-
-    if junger_mensch:
+    if 0 <= alter < 27:
         return "Die junge Person"
-    elif erwachsener_mensch:
+    elif 27 <= alter <= 59 :
         return "Die erwachsene Person"
-    elif alter_mensch:
+    elif 60 <= alter <= 122:
         return "Die ältere Person"
-    elif zu_alter_mensch:
+    elif alter > 122:
         return "Die unglaubwürdige Person"
     else:
         return "Versuch es nochmal^^"
