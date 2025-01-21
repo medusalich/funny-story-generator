@@ -2,16 +2,6 @@ import datetime
 import math
 
 
-def alter_erfragen() -> int:
-    """Frage Alter des Nutzers ab."""    
-    while True:
-        try:
-            alter = int(input("\nNenne mir dein Alter in Zahlenform: "))
-            return alter
-        except ValueError:
-            print("Bitte eine Zahl eingeben:")
-
-
 def alter_einstufen(alter: int) -> str:
     """Erzeugt eine Alterseinstufung abhängig vom Alter."""
     if 0 <= alter < 27:

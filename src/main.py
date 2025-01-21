@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import alter
+import user_input
 
 def main():
 
@@ -15,7 +16,7 @@ def main():
     
     aktivitaet = input("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
 
-    story_abschnitt_alter = alter.alter_erfragen()
+    story_abschnitt_alter = user_input.user_input_ohne_buchstabe("\nNenne mir dein Alter in Zahlenform: ")
     alters_einstufung = alter.alter_einstufen(story_abschnitt_alter)
     funfact_jahrzehnt = alter.alter_funfact(story_abschnitt_alter)
 
