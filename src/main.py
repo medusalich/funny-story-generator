@@ -2,6 +2,20 @@
 import alter
 import user_input
 
+
+def geschlecht_erfragen() -> str:
+    geschlecht = input("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ")
+    
+    if geschlecht == "männlich":
+        return "Er"
+    elif geschlecht == "weiblich":
+        return "Sie"
+    elif geschlecht == "divers":
+        return "Er/Sie"
+    else:
+        raise NotImplementedError
+
+
 def main():
 
     print("Herzlich willkommen und viel Spaß beim Gestalten deiner Geschichte")
