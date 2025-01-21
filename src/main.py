@@ -16,7 +16,7 @@ def geschlecht_erfragen() -> str:
         raise NotImplementedError
 
 
-def main():
+def main() -> None:
 
     print("Herzlich willkommen und viel Spaß beim Gestalten deiner Geschichte")
     
