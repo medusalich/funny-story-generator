@@ -6,15 +6,15 @@ def main():
 
     print("Herzlich willkommen und viel Spaß beim Gestalten deiner Geschichte")
     
-    name = input("\nGib deinen Namen ein: ")
+    name = user_input.user_input_ohne_zahl("\nGib deinen Namen ein: ")
     
-    gegenstand = input(f"\nHallo {name}, bitte nenne mir deinen liebsten Gegenstand: ")
+    gegenstand = user_input.user_input_ohne_zahl(f"\nHallo {name}, bitte nenne mir deinen liebsten Gegenstand: ")
     
-    monat = input("\nGib einen Monat ein: ")
+    monat = user_input.user_input_ohne_zahl("\nGib einen Monat ein: ")
 
-    ort = input("\nGib einen Ort ein, an dem du jetzt gerne wärst: ")
+    ort = user_input.user_input_ohne_zahl("\nGib einen Ort ein, an dem du jetzt gerne wärst: ")
     
-    aktivitaet = input("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
+    aktivitaet = user_input.user_input_ohne_zahl("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
 
     story_abschnitt_alter = user_input.user_input_ohne_buchstabe("\nNenne mir dein Alter in Zahlenform: ")
     alters_einstufung = alter.alter_einstufen(story_abschnitt_alter)
