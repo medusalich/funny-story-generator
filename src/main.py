@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import alter
 import user_input
+import random
 
 
 def geschlecht_erfragen() -> str:
@@ -14,6 +15,19 @@ def geschlecht_erfragen() -> str:
         return "Er/Sie"
     else:
         raise NotImplementedError
+
+
+def einleitung_der_story() -> str:
+    """Erzeugt ein wechsel am Story Anfang."""
+    story_einleiten = (
+        "In einem weit entfernten Königreich, ",
+        "Es war einmal ",
+        "Vor langer langer Zeit ",
+        "In einer stürmischen Nacht, ",
+        "In einer Welt, in der die Zeit stillzustehen schien, "
+    )
+    random_element = random.choice(story_einleiten)
+    return random_element
 
 
 def main() -> None:
@@ -36,7 +50,7 @@ def main() -> None:
 
     print("\nHier folgt deine für dich geschriebene Geschichte:")
     
-    print(f"\nEs war einmal im {monat} eine Person namens {name}, die jetzt gern im {ort} wäre.")
+    print(f"\n{einleitung_der_story()} im {monat} eine Person namens {name}, die jetzt gern im {ort} wäre.")
     print(f"{alters_einstufung}, die im Jahrzehnt, {funfact_jahrzehnt}, geboren wurde.")
     print(f"{name} mag es am liebsten, mit dem {gegenstand} zu {aktivitaet}.")
 
