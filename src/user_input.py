@@ -5,7 +5,7 @@ def user_input_ohne_zahl(text: str) -> str:
         if not any(char.isdigit() for char in worte):
             return worte
         else:
-            print("Bitte keine Zahlen verwenden, versuche es nochmal")   
+            print("Bitte keine Zahlen verwenden, versuche es nochmal.")   
 
 
 def user_input_ohne_buchstabe(text: str) -> int:
@@ -15,5 +15,5 @@ def user_input_ohne_buchstabe(text: str) -> int:
             zahl = int(input(text))
             return zahl
         except ValueError:
-            print("Bitte eine Zahl eingeben, versuche es nochmal")
+            print("Bitte nur Zahlen verwenden, versuche es nochmal.")
 
