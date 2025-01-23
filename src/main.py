@@ -31,6 +31,29 @@ def einleitung_der_story() -> str:
     return random_element
 
 
+def wetter_storyabschnitt() -> str:
+    """Erzeugt ein wechsel des Wetters."""
+    story_wetter = (
+        "sonnigen",
+        "nebeligen",
+        "verschneiten",
+        "bewölkten",
+        "wolkigen"
+    )
+    random_wetter_element = random.choice(story_wetter)
+    return random_wetter_element
+
+
+def positionieren_von_zu() -> str:
+    """Das Wort 'zu' im ersten Satz je nach Input positionieren"""
+    aktivitaet = user_input.user_input_ohne_zahl("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
+    if "" in aktivitaet:
+        aktivitaet_split = aktivitaet.rsplit("", 1)
+    else:
+        pass        
+    return aktivitaet
+        
+
 def main() -> None:
 
     print("Herzlich willkommen und viel Spaß beim Gestalten deiner Geschichte")
