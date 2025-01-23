@@ -66,7 +66,7 @@ def main() -> None:
 
     ort = user_input.user_input_ohne_zahl("\nGib einen Ort ein, an dem du jetzt gerne wärst: ")
     
-    aktivitaet = user_input.user_input_ohne_zahl("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
+    story_abschnitt_geschlecht = geschlecht_erfragen()
 
     story_abschnitt_alter = user_input.user_input_ohne_buchstabe("\nNenne mir dein Alter in Zahlenform: ")
     alters_einstufung = alter.alter_einstufen(story_abschnitt_alter)
@@ -74,9 +74,9 @@ def main() -> None:
 
     print("\nHier folgt deine für dich geschriebene Geschichte:")
     
-    print(f"\n{einleitung_der_story()} im {monat} eine Person namens {name}, die jetzt gern im {ort} wäre.")
-    print(f"{alters_einstufung}, die im Jahrzehnt, {funfact_jahrzehnt}, geboren wurde.")
-    print(f"{name} mag es am liebsten, mit dem {gegenstand} zu {aktivitaet}.")
+    print(f"\n{einleitung_der_story()} eine {alters_einstufung} namens {name}, sie liebte es {positionieren_von_zu()}.")
+    print(f"{story_abschnitt_geschlecht} ist in dem Jahrzehnt, {funfact_jahrzehnt} geboren.")
+    print(f"An einem {wetter_storyabschnitt()} Tag im {monat} nahm {geschlecht_erfragen()} seinen/ihren wichtigsten {gegenstand} und ging zum {ort}.")
 
 
 if __name__ == "__main__":

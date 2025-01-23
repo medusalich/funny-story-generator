@@ -5,13 +5,13 @@ import math
 def alter_einstufen(alter: int) -> str:
     """Erzeugt eine Alterseinstufung abhängig vom Alter."""
     if 0 <= alter < 27:
-        return "Die junge Person"
+        return "junge Person"
     elif 27 <= alter <= 59 :
-        return "Die erwachsene Person"
+        return "erwachsene Person"
     elif 60 <= alter <= 122:
-        return "Die ältere Person"
+        return "ältere Person"
     elif alter > 122:
-        return "Die unglaubwürdige Person"
+        return "unglaubwürdige Person"
     else:
         return "Versuch es nochmal^^"
 
