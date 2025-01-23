@@ -5,16 +5,17 @@ import random
 
 
 def geschlecht_erfragen() -> str:
-    geschlecht = input("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ")
-    
-    if geschlecht == "männlich":
-        return "Er"
-    elif geschlecht == "weiblich":
-        return "Sie"
-    elif geschlecht == "divers":
-        return "Er/Sie"
-    else:
-        raise NotImplementedError
+    """Erzeugt eine Einstufung abhängig vom geschlecht."""
+    while True:
+        geschlecht_input = user_input.user_input_ohne_zahl("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ")   
+        if geschlecht_input in ["m", "männlich"]:
+            return "er"
+        elif geschlecht_input in ["w", "weiblich"]:
+            return "sie"
+        elif geschlecht_input in ["d", "divers"]:
+            return "er/sie"
+        else:
+            print("Bitte gib nur 'männlich', 'weiblich' oder 'divers' ein.") 
 
 
 def einleitung_der_story() -> str:
