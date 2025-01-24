@@ -16,3 +16,4 @@
 11. lowercase Geschlechtsabfrage
 12. try/except zu if/else user_input_ohne_buchstabe
 13. try/except aus alter_funfact entfernen
+14. Formatierer hinzufügen
