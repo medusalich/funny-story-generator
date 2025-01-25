@@ -11,9 +11,9 @@ def user_input_ohne_zahl(text: str) -> str:
 def user_input_ohne_buchstabe(text: str) -> int:
     """Frage den Nutzer nach einer Zahl"""    
     while True:
-        try:
-            zahl = int(input(text))
-            return zahl
-        except ValueError:
+        zahl = input(text)
+        if zahl.isdigit():
+            return int(zahl)
+        else:
             print("Bitte nur Zahlen verwenden, versuche es nochmal.")
 
