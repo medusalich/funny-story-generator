@@ -6,7 +6,7 @@ def alter_einstufen(alter: int) -> str:
     """Erzeugt eine Alterseinstufung abhängig vom Alter."""
     if 0 <= alter < 27:
         return "junge Person"
-    elif 27 <= alter <= 59 :
+    elif 27 <= alter <= 59:
         return "erwachsene Person"
     elif 60 <= alter <= 122:
         return "ältere Person"
@@ -31,12 +31,12 @@ def alter_funfact(alter: int) -> str:
         1990: "als Tamagotchis populär wurden",
         2000: "als die D-Mark verabschiedet wurde",
         2010: "als Sprachassistenz-Geräte beliebte Gesprächspartner wurden",
-        2020: "als „Zoom“ ein neues Synonym für „Treffen“ war"
+        2020: "als „Zoom“ ein neues Synonym für „Treffen“ war",
     }
 
     aktuelles_jahr = datetime.datetime.now().year
     geburtsjahr = aktuelles_jahr - alter
-    geburtsjahr_abgerundet = math.floor(geburtsjahr / 10 ) * 10
+    geburtsjahr_abgerundet = math.floor(geburtsjahr / 10) * 10
     try:
         funfact = funfacts[geburtsjahr_abgerundet]
     except KeyError:
