@@ -7,7 +7,7 @@ import random
 def geschlecht_erfragen() -> str:
     """Erzeugt eine Einstufung abhängig vom Geschlecht."""
     while True:
-        geschlecht_input = user_input.user_input_ohne_zahl("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ")   
+        geschlecht_input = user_input.ohne_zahl("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ")   
         if geschlecht_input in ["m", "männlich"]:
             return "er"
         elif geschlecht_input in ["w", "weiblich"]:
@@ -46,7 +46,7 @@ def wetter_storyabschnitt() -> str:
 
 def aktivitaet_erfragen() -> str:
     """Erfrage Aktivität und setze 'zu' ein"""
-    story_abschnitt_aktivitaet = user_input.user_input_ohne_zahl("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
+    story_abschnitt_aktivitaet = user_input.ohne_zahl("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
     aktivitaet_split = story_abschnitt_aktivitaet.strip().rsplit(" ", 1)
     aktivitaet_split.insert(-1, "zu")
     story_abschnitt_aktivitaet = " ".join(aktivitaet_split)      
@@ -56,14 +56,14 @@ def aktivitaet_erfragen() -> str:
 def main() -> None:
     print("Herzlich willkommen und viel Spaß beim Gestalten deiner Geschichte")
     
-    name = user_input.user_input_ohne_zahl("\nGib deinen Namen ein: ")
-    gegenstand = user_input.user_input_ohne_zahl(f"\nHallo {name}, bitte nenne mir deinen liebsten Gegenstand: ")
-    monat = user_input.user_input_ohne_zahl("\nGib einen Monat ein: ")
-    ort = user_input.user_input_ohne_zahl("\nGib einen Ort ein, an dem du jetzt gerne wärst: ")
+    name = user_input.ohne_zahl("\nGib deinen Namen ein: ")
+    gegenstand = user_input.ohne_zahl(f"\nHallo {name}, bitte nenne mir deinen liebsten Gegenstand: ")
+    monat = user_input.ohne_zahl("\nGib einen Monat ein: ")
+    ort = user_input.ohne_zahl("\nGib einen Ort ein, an dem du jetzt gerne wärst: ")
 
     story_abschnitt_aktivitaet = aktivitaet_erfragen()
     story_abschnitt_geschlecht = geschlecht_erfragen()
-    story_abschnitt_alter = user_input.user_input_ohne_buchstabe("\nNenne mir dein Alter in Zahlenform: ")
+    story_abschnitt_alter = user_input.ohne_buchstabe("\nNenne mir dein Alter in Zahlenform: ")
     alters_einstufung = alter.alter_einstufen(story_abschnitt_alter)
     funfact_jahrzehnt = alter.alter_funfact(story_abschnitt_alter)
 
