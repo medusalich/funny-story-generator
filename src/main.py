@@ -7,7 +7,7 @@ import random
 def geschlecht_erfragen() -> str:
     """Erzeugt eine Einstufung abhängig vom Geschlecht."""
     while True:
-        geschlecht_input = user_input.ohne_zahl("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ")
+        geschlecht_input = user_input.ohne_zahl("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ").lower()
         if geschlecht_input in ["m", "männlich"]:
             return "er"
         elif geschlecht_input in ["w", "weiblich"]:
@@ -84,7 +84,7 @@ def main() -> None:
     """Start der Story und Neustartabfrage"""
     while True:
         gestalte_story()
-        neustart_erfragen = input("Soll der Spaß von vorn anfangen? (ja/nein): ")
+        neustart_erfragen = input("Soll der Spaß von vorn anfangen? (ja/nein): ").lower()
         if neustart_erfragen == "ja":
             continue
         elif neustart_erfragen == "nein":
