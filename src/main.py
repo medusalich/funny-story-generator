@@ -53,7 +53,8 @@ def aktivitaet_erfragen() -> str:
     return story_abschnitt_aktivitaet
 
 
-def main() -> None:
+def gestalte_story() -> None:
+    """Erzeuge Story durch User-Eingaben"""
     print("Herzlich willkommen und viel Spaß beim Gestalten deiner Geschichte")
 
     name = user_input.ohne_zahl("\nGib deinen Namen ein: ")
@@ -77,6 +78,20 @@ def main() -> None:
         f"An einem {wetter_storyabschnitt()} Tag im {monat}"
         + f"nahm {story_abschnitt_geschlecht} seinen/ihren wichtigsten {gegenstand} und ging zum {ort}."
     )
+
+
+def main() -> None:
+    """Start der Story und Neustartabfrage"""
+    while True:
+        gestalte_story()
+        neustart_erfragen = input("Soll der Spaß von vorn anfangen? (ja/nein): ")
+        if neustart_erfragen == "ja":
+            continue
+        elif neustart_erfragen == "nein":
+            print("Vielen Dank fürs mitmachen")
+            break
+        else:
+            print("Bitte nur ja oder nein eingeben, versuche es nochmal.")
 
 
 if __name__ == "__main__":
