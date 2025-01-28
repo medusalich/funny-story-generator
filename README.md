@@ -11,9 +11,10 @@
 7. Variablen- & Methoden-Namen anpassen
 8. ~~Typehints hinzufügen~~
 9. An Erklärbär-Texte (Docstrings) denken
-10. Tests
+10. Tests (venv, pip, pytest)
 11. ~~lowercase Geschlechtsabfrage~~
 12. ~~try/except zu if/else user_input_ohne_buchstabe~~
-13. try/except aus alter_funfact entfernen
+13. ~~try/except aus alter_funfact entfernen~~
 14. ~~Formatierer hinzufügen~~
 15. ~~Leere Eingaben verbieten~~
+16. tkinter
