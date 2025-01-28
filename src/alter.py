@@ -37,8 +37,9 @@ def alter_funfact(alter: int) -> str:
     aktuelles_jahr = datetime.datetime.now().year
     geburtsjahr = aktuelles_jahr - alter
     geburtsjahr_abgerundet = math.floor(geburtsjahr / 10) * 10
-    try:
+
+    if geburtsjahr_abgerundet in funfacts:
         funfact = funfacts[geburtsjahr_abgerundet]
-    except KeyError:
-        return "Nicht glaubwürdig."
+    else:
+        funfact = "als es keine Funfacts gab"
     return funfact
