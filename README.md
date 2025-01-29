@@ -8,7 +8,7 @@
 4. ~~Geschlecht und Alter einfügen.~~
 5. ~~Satzvariationen für den Start der Geschichte.~~
 6. ~~Abfrage, ob die Geschichte neu gestartet werden soll.~~
-7. Variablen- & Methoden-Namen anpassen
+7. ~~Variablen- & Methoden-Namen anpassen~~
 8. ~~Typehints hinzufügen~~
 9. An Erklärbär-Texte (Docstrings) denken
 10. Tests (venv, pip, pytest)
