@@ -2,7 +2,7 @@ import datetime
 import math
 
 
-def alter_einstufen(alter: int) -> str:
+def stufe_alter_ein(alter: int) -> str:
     """Erzeugt eine Alterseinstufung abhängig vom Alter."""
     if 0 <= alter < 27:
         return "junge Person"
@@ -16,7 +16,7 @@ def alter_einstufen(alter: int) -> str:
         return "Versuch es nochmal^^"
 
 
-def alter_funfact(alter: int) -> str:
+def erzeuge_funfact(alter: int) -> str:
     """Erzeugt eine Funfact nach Geburtsjahrzehnt."""
     funfacts = {
         1900: "als Autos noch mit Pferden um die Wette fuhren",

@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-import alter
+import age
 import user_input
 import random
 
 
-def geschlecht_erfragen() -> str:
+def erfrage_geschlecht() -> str:
     """Erzeugt eine Einstufung abhängig vom Geschlecht."""
     while True:
         geschlecht_input = user_input.ohne_zahl("\n(männlich/weiblich/divers)Bitte gib dein Geschlecht ein: ").lower()
@@ -18,7 +18,7 @@ def geschlecht_erfragen() -> str:
             print("Bitte gib nur 'männlich', 'weiblich' oder 'divers' ein.")
 
 
-def einleitung_der_story() -> str:
+def gestalte_story_einleitung() -> str:
     """Erzeugt einen Wechsel am Story Anfang."""
     story_einleiten = (
         "In einem weit entfernten Königreich, ",
@@ -31,7 +31,7 @@ def einleitung_der_story() -> str:
     return random_element
 
 
-def wetter_storyabschnitt() -> str:
+def gestalte_story_wetter() -> str:
     """Erzeugt einen Wechsel des Wetters."""
     story_wetter = (
         "sonnigen",
@@ -44,7 +44,7 @@ def wetter_storyabschnitt() -> str:
     return random_wetter_element
 
 
-def aktivitaet_erfragen() -> str:
+def erfrage_aktivitaet() -> str:
     """Erfrage Aktivität und setze 'zu' ein"""
     story_abschnitt_aktivitaet = user_input.ohne_zahl("\nGib ein, was du jetzt gerne am liebsten tun würdest: ")
     aktivitaet_split = story_abschnitt_aktivitaet.strip().rsplit(" ", 1)
@@ -62,21 +62,18 @@ def gestalte_story() -> None:
     monat = user_input.ohne_zahl("\nGib einen Monat ein: ")
     ort = user_input.ohne_zahl("\nGib einen Ort ein, an dem du jetzt gerne wärst: ")
 
-    story_abschnitt_aktivitaet = aktivitaet_erfragen()
-    story_abschnitt_geschlecht = geschlecht_erfragen()
-    story_abschnitt_alter = user_input.ohne_buchstabe("\nNenne mir dein Alter in Zahlenform: ")
-    alters_einstufung = alter.alter_einstufen(story_abschnitt_alter)
-    funfact_jahrzehnt = alter.alter_funfact(story_abschnitt_alter)
+    aktivitaet = erfrage_aktivitaet()
+    geschlecht = erfrage_geschlecht()
+    alter = user_input.ohne_buchstabe("\nNenne mir dein Alter in Zahlenform: ")
+    alters_einstufung = age.stufe_alter_ein(alter)
+    funfact_jahrzehnt = age.erzeuge_funfact(alter)
 
     print("\nHier folgt deine für dich geschriebene Geschichte:")
+    print(f"\n{gestalte_story_einleitung()} eine {alters_einstufung} namens {name}, " + f"sie liebte es {aktivitaet}.")
+    print(f"{geschlecht} ist in dem Jahrzehnt, {funfact_jahrzehnt} geboren.")
     print(
-        f"\n{einleitung_der_story()} eine {alters_einstufung} namens {name}, "
-        + f"sie liebte es {story_abschnitt_aktivitaet}."
-    )
-    print(f"{story_abschnitt_geschlecht} ist in dem Jahrzehnt, {funfact_jahrzehnt} geboren.")
-    print(
-        f"An einem {wetter_storyabschnitt()} Tag im {monat}"
-        + f"nahm {story_abschnitt_geschlecht} seinen/ihren wichtigsten {gegenstand} und ging zum {ort}."
+        f"An einem {gestalte_story_wetter()} Tag im {monat}"
+        + f"nahm {geschlecht} seinen/ihren wichtigsten {gegenstand} und ging zum {ort}."
     )
 
 
