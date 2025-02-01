@@ -37,7 +37,7 @@ def gestalte_story_wetter() -> str:
         "sonnigen",
         "nebeligen",
         "verschneiten",
-        "bewölkten",
+        "regnerischen",
         "wolkigen",
     )
     random_wetter_element = random.choice(story_wetter)
