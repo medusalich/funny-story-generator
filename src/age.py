@@ -13,7 +13,7 @@ def stufe_alter_ein(alter: int) -> str:
     elif alter > 122:
         return "unglaubwürdige Person"
     else:
-        return "Versuch es nochmal^^"
+        return "noch nicht geborene Person"
 
 
 def erzeuge_funfact(alter: int) -> str:
