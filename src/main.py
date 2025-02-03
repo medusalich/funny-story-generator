@@ -1,7 +1,9 @@
 #!/usr/bin/env python
+import random
+
 import age
 import user_input
-import random
+
 
 
 def erfrage_geschlecht() -> str:
