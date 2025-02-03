@@ -17,7 +17,7 @@ def stufe_alter_ein(alter: int) -> str:
 
 
 def erzeuge_funfact(alter: int) -> str:
-    """Erzeugt eine Funfact nach Geburtsjahrzehnt."""
+    """Erzeugt einen Funfact nach Geburtsjahrzehnt."""
     funfacts = {
         1900: "als Autos noch mit Pferden um die Wette fuhren",
         1910: "als das erste Telefon mit Wählscheibe herauskam",
