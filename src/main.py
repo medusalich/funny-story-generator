@@ -5,7 +5,6 @@ import age
 import user_input
 
 
-
 def erfrage_geschlecht() -> str:
     """Erzeugt eine Einstufung abhängig vom Geschlecht."""
     while True:
@@ -23,11 +22,11 @@ def erfrage_geschlecht() -> str:
 def gestalte_story_einleitung() -> str:
     """Erzeugt einen Wechsel am Story Anfang."""
     story_einleiten = (
-        "In einem weit entfernten Königreich, ",
-        "Es war einmal ",
-        "Vor langer langer Zeit ",
-        "In einer stürmischen Nacht, ",
-        "In einer Welt, in der die Zeit stillzustehen schien, ",
+        "In einem weit entfernten Königreich, gab es",
+        "Es war einmal",
+        "Vor langer langer Zeit gab es",
+        "In einer stürmischen Nacht, gab es",
+        "In einer Welt, in der die Zeit stillzustehen schien, gab es",
     )
     random_element = random.choice(story_einleiten)
     return random_element
@@ -72,10 +71,10 @@ def gestalte_story() -> None:
 
     print("\nHier folgt deine für dich geschriebene Geschichte:")
     print(f"\n{gestalte_story_einleitung()} eine {alters_einstufung} namens {name}, " + f"sie liebte es {aktivitaet}.")
-    print(f"{geschlecht} ist in dem Jahrzehnt, {funfact_jahrzehnt} geboren.")
+    print(f"{name} ist in dem Jahrzehnt, {funfact_jahrzehnt} geboren.")
     print(
         f"An einem {gestalte_story_wetter()} Tag im {monat}"
-        + f"nahm {geschlecht} seinen/ihren wichtigsten {gegenstand} und ging zum {ort}."
+        + f" nahm {geschlecht} seinen/ihren liebstes {gegenstand} und ging zum {ort}."
     )
 
 
@@ -83,14 +82,14 @@ def main() -> None:
     """Start der Story und Neustartabfrage"""
     while True:
         gestalte_story()
-        neustart_erfragen = input("Soll der Spaß von vorn anfangen? (ja/nein): ").lower()
+        neustart_erfragen = input("\nSoll der Spaß von vorn anfangen? (ja/nein): ").lower()
         if neustart_erfragen == "ja":
             continue
         elif neustart_erfragen == "nein":
-            print("Vielen Dank fürs mitmachen")
+            print("\nVielen Dank fürs mitmachen")
             break
         else:
-            print("Bitte nur ja oder nein eingeben, versuche es nochmal.")
+            print("\nBitte nur ja oder nein eingeben, versuche es nochmal.")
 
 
 if __name__ == "__main__":
