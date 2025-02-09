@@ -34,12 +34,14 @@ def erzeuge_funfact(alter: int) -> str:
         2020: "als „Zoom“ ein neues Synonym für „Treffen“ war",
     }
 
-    aktuelles_jahr = datetime.datetime.now().year
-    geburtsjahr = aktuelles_jahr - alter
-    geburtsjahr_abgerundet = math.floor(geburtsjahr / 10) * 10
+    if alter >= 0:
+        aktuelles_jahr = datetime.datetime.now().year
+        geburtsjahr = aktuelles_jahr - alter
+        geburtsjahr_abgerundet = math.floor(geburtsjahr / 10) * 10
 
-    if geburtsjahr_abgerundet in funfacts:
-        funfact = funfacts[geburtsjahr_abgerundet]
-    else:
-        funfact = "als es keine Funfacts gab"
-    return funfact
+        if geburtsjahr_abgerundet in funfacts:
+            funfact = funfacts[geburtsjahr_abgerundet]
+        else:
+            funfact = "als es keine Funfacts gab"
+        return funfact
+    return "404 ERROR"
