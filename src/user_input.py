@@ -2,10 +2,10 @@ def ohne_zahl(text: str) -> str:
     """Frage den Nutzer nach einer nicht leeren Eingabe ohne Zahl"""
     while True:
         nutzer_eingabe = input(text)
-        if not any(char.isdigit() for char in nutzer_eingabe):
-            return nutzer_eingabe
-        elif nutzer_eingabe == "":
+        if nutzer_eingabe == "":
             print("Es wurde nichts eingeben, versuche es nochmal.")
+        elif not any(char.isdigit() for char in nutzer_eingabe):
+            return nutzer_eingabe
         else:
             print("Bitte keine Zahlen verwenden, versuche es nochmal.")
 
