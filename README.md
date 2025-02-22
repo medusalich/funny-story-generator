@@ -1,20 +1,40 @@
 # Funny Story Generator
 
-## To-Do
+Der Story Generator ist ein Python-Skript, das es dem Nutzer ermöglicht, eine interaktive Geschichte zu erstellen,
+indem er verschiedene Informationen eingibt. Die Geschichte wird dann individuell zusammengestellt und ausgegeben.
 
-1. ~~Keine Zahlen in der Eingabe erlauben.~~
-2. ~~Leerzeichen vor Satzzeichen entfernen.~~
-3. ~~Das "zu" bei `aktivitaet` an die richtige Stelle setzen.~~
-4. ~~Geschlecht und Alter einfügen.~~
-5. ~~Satzvariationen für den Start der Geschichte.~~
-6. ~~Abfrage, ob die Geschichte neu gestartet werden soll.~~
-7. ~~Variablen- & Methoden-Namen anpassen~~
-8. ~~Typehints hinzufügen~~
-9. An Erklärbär-Texte (Docstrings) denken
-10. Tests (venv, pip, pytest)
-11. ~~lowercase Geschlechtsabfrage~~
-12. ~~try/except zu if/else user_input_ohne_buchstabe~~
-13. ~~try/except aus alter_funfact entfernen~~
-14. ~~Formatierer hinzufügen~~
-15. ~~Leere Eingaben verbieten~~
-16. tkinter
+## Funktionen
+
+1. Erfragung des Geschlechts des Nutzers
+
+2. Zufälliges Auswählen einer Einstiegsformulierung für die Geschichte
+
+3. Zufälliges Auswählen des Wetters für die Geschichte
+
+4. Erfragung einer Aktivität, die der Nutzer gerne ausüben möchte
+
+5. Erfragung des Namens, eines Gegenstands, eines Monats und eines Ortes
+
+6. Einstufung des Alters des Nutzers in "jung", "erwachsen" oder "älter"
+
+7. Generierung eines Fun Facts basierend auf dem Geburtsjahrzehnt des Nutzers
+
+8. Möglichkeit, die Geschichte mehrmals hintereinander zu erstellen
+
+## Verwendung
+
+- Stelle sicher, dass du Python auf deinem System installiert hast.
+  
+- Lade das Projekt von GitHub herunter oder klone es in dein lokales Verzeichnis.
+  
+- Öffne eine Konsole oder ein Terminal und navigiere in das Projektverzeichnis.
+
+- Führe das Skript mit dem Befehl python story_generator.py aus.
+
+- Folge den Anweisungen auf dem Bildschirm, um deine Geschichte zu erstellen.
+
+- Entscheide, ob du eine neue Geschichte erstellen möchtest.
+
+## Tests
+
+Das Projekt enthält auch Testfälle, die mit dem Python-Testframework pytest ausgeführt werden können.
